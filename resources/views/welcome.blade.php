@@ -1,5 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Welcome to laravel</h1>
+    <div class="container">
+        <div class="lightning">
+            <div class="noisy text-center">
+                MOVIES
+            </div>
+        </div>
+        <div class="row row-cols-6 gap-5 p-3">
+            @foreach ($movies as $movie)
+                <div class="col">
+                    <div class="d-flex h-100">
+                        <div class="card">
+                            <img src="{{ $movie->image }}" class="card-img-top poster" alt="{{ $movie->title }}">
+                            <div class="card-body">
+                                <h5 class="card-title text-white">{{ $movie->title }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
