@@ -7,7 +7,7 @@
                 MOVIES
             </div>
         </div>
-        <div class="row row-cols-6 gap-5 p-3">
+        <div class="row row-cols-3 g-5 p-3">
             @foreach ($movies as $movie)
                 <div class="col">
                     <div class="d-flex h-100">
